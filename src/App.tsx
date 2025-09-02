@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from "./components/home/Home";
 import Destination from "./components/destination/Destination";
 import Crew from "./components/crew/Crew";
@@ -7,7 +7,6 @@ function App(): React.ReactElement {
 
   return (
  <div>
-     {/* <Home /> */}
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />} />

@@ -45,7 +45,7 @@ function Crew() {
                 </p>
 
                 <div className="flex justify-center mt-6 lg:justify-start lg:items-end lg:h-52">
-                  {CrewMembers.map((crew: CrewMember, index: number) => (
+                  {CrewMembers.map((_, index: number) => (
                     <span
                       key={index}
                       onClick={() => setActiveIndex(index)}
