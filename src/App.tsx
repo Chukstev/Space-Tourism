@@ -1,0 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from "./components/home/Home";
+import Destination from "./components/destination/Destination";
+import Crew from "./components/crew/Crew";
+import Technology from "./components/technology/Technology";
+function App(): React.ReactElement {
+
+  return (
+ <div>
+     {/* <Home /> */}
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/destination" element={<Destination />} />
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/technology" element={<Technology />} />
+      </Routes> 
+ </div>
+
+  )
+}
+
+export default App;
