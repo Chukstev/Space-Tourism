@@ -66,13 +66,13 @@ function Destination(): React.ReactElement {
                 <div className="flex flex-col gap-10 justify-center items-center sm:flex-row sm:justify-around lg:gap-20 mt-10">
                   <div className="space-y-2">
                     <p className="text-[#D0D6F9] text-sm text-center sm:text-left">AVG. DISTANCE</p>
-                    <h2 className="text-white text-2xl">
+                    <h2 className="text-white text-2xl text-center sm:text-left">
                       {DestinationData[activeIndex].distance}
                     </h2>
                   </div>
                   <div className="space-y-2">
                     <p className="text-[#D0D6F9] text-sm text-center sm:text-left">EST. TRAVEL TIME</p>
-                    <h2 className="text-white text-2xl">
+                    <h2 className="text-white text-2xl text-center sm:text-left">
                       {DestinationData[activeIndex].travel}
                     </h2>
                   </div>
