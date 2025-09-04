@@ -71,22 +71,22 @@ function Navigation() {
       </div>
       {/* Mobile slide-in Menu */}
 
-      {isOpen && (
-        <div className="fixed top-0 right-0 w-2/3 h-full bg-gray-900/40 backdrop-blur-lg text-white">
+      
+        <div className={`fixed top-0 right-0 w-2/3 h-full bg-gray-900/40 backdrop-blur-lg text-white transform transition-transform duration-500 ease-in-out z-50 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
           {/* close button */}
           <button
             onClick={() => setIsOpen(false)}
-            className="mr-5 mt-5 float-end"
+            className="mr-6 mt-8 float-right"
           >
             <FiX className="text-white text-3xl" />
           </button>
 
-          <ul className="flex flex-col gap-6 mt-20 pl-5 pt-5 w-full text-white">
+          <ul className="flex flex-col items-stretch gap-6 mt-20 pl-5 pt-5 w-full text-white">
             <li className="flex-1">
               <NavLink
                 to={"/"}
                 className={({ isActive }: { isActive: boolean }) =>
-                  `text-xs md:text-sm lg:text-base cursor-pointer py-1 block ${
+                  `text-base md:text-sm lg:text-base cursor-pointer py-1 block ${
                     isActive ? "border-r-2 border-white" : ""
                   }`
                 }
@@ -99,7 +99,7 @@ function Navigation() {
               <NavLink
                 to={"/destination"}
                 className={({ isActive }: { isActive: boolean }) =>
-                  `text-xs cursor-pointer block py-1 ${
+                  `text-base cursor-pointer block py-1 ${
                     isActive ? "border-r-2 border-white" : ""
                   }`
                 }
@@ -112,7 +112,7 @@ function Navigation() {
               <NavLink
                 to={"/crew"}
                 className={({ isActive }: { isActive: boolean }) =>
-                  `text-xs md:text-sm lg:text-base cursor-pointer py-1 block ${
+                  `text-base md:text-sm lg:text-base cursor-pointer py-1 block ${
                     isActive ? "border-r-2 border-white" : ""
                   }`
                 }
@@ -125,7 +125,7 @@ function Navigation() {
               <NavLink
                 to={"/technology"}
                 className={({ isActive }: { isActive: boolean }) =>
-                  `text-xs md:text-sm lg:text-base cursor-pointer py-1 block ${
+                  `text-base md:text-sm lg:text-base cursor-pointer py-1 block ${
                     isActive ? "border-r-2 border-white" : ""
                   }`
                 }
@@ -136,7 +136,7 @@ function Navigation() {
             </li>
           </ul>
         </div>
-      )}
+      
     </div>
   );
 }
