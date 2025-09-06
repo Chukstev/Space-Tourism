@@ -39,7 +39,7 @@ function Destination(): React.ReactElement {
             </div>
             <div className="w-80 sm:w-[512px] lg:w-96 pb-10">
               <div>
-                <ul className="flex justify-center gap-6 items-center">
+                <ul className="flex justify-center gap-6 items-center lg:justify-start">
                   {DestinationData.map((dest: DestinationItem, index: number) => (
                     <li
                       key={index}
@@ -56,7 +56,7 @@ function Destination(): React.ReactElement {
                 </ul>
               </div>
               <div>
-                <h1 className="text-7xl py-3 text-white text-center">
+                <h1 className="text-7xl py-3 text-white text-center lg:text-left">
                   {DestinationData[activeIndex].title}
                 </h1>
                 <p className="text-[#D0D6F9] text-center lg:text-left px-5 sm:px-0">
